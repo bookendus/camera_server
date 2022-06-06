@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: ./flask
+      dockerfile: Dockerfile
+    ports:
+      - 5000:5000
+    volumes:
+      - ./images:/app/images
+    container_name: api
